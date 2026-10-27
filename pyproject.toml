@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pqblocks-primitives"
+version = "0.1.0"
+description = "Production-ready integrated post-quantum cryptographic primitives (ML-KEM, ML-DSA, SLH-DSA, and hybrid schemes)."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+authors = [{name = "The PQBlocks Authors"}]
+keywords = ["pqc", "post-quantum", "fips-203", "fips-204", "fips-205", "ml-kem", "ml-dsa", "slh-dsa", "liboqs", "cryptography"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security :: Cryptography",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = ["cryptography", "liboqs-python"]
+
+[project.optional-dependencies]
+test = ["pytest", "cryptography", "liboqs-python"]
+
+[project.urls]
+Homepage = "https://github.com/PQBlocks/fips-pqc-primitives"
+Documentation = "https://github.com/PQBlocks/fips-pqc-primitives#readme"
+Source = "https://github.com/PQBlocks/fips-pqc-primitives"
+Changelog = "https://github.com/PQBlocks/fips-pqc-primitives/blob/main/CHANGELOG.md"
+Issues = "https://github.com/PQBlocks/fips-pqc-primitives/issues"
+Security = "https://github.com/PQBlocks/fips-pqc-primitives/security/policy"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "pqblocks-primitives"
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/PQBlocks/fips-pqc-primitives"
+authors:
+  - name: "The PQBlocks Authors"
+keywords:
+  - pqc
+  - post-quantum
+  - fips-203
+  - fips-204
+  - fips-205
+  - ml-kem
+  - ml-dsa
+  - slh-dsa
+  - liboqs
+  - cryptography
+abstract: "Production-ready integrated post-quantum cryptographic primitives (ML-KEM, ML-DSA, SLH-DSA, and hybrid schemes)."
